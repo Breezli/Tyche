@@ -3,7 +3,7 @@ import { each } from 'lodash-es'
 
 type SFCWithInstall<T> = T & Plugin
 
-export function makeInstallable(components: Plugin[]) {
+export function makeInstaller(components: Plugin[]) {
 	const installer = (app: App) => each(components, (c) => app.use(c))
 	return installer as Plugin
 }
