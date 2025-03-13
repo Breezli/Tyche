@@ -1,5 +1,6 @@
 /* eslint-env node */
 module.exports = {
+	publicPath: process.env.NODE_ENV === 'production' ? '/Tyche/' : '/',
 	plugins: [
 		require('postcss-nested'),
 		require('postcss-each-variables'),
@@ -9,5 +10,4 @@ module.exports = {
 			},
 		}),
 	],
-	publicPath: process.env.NODE_ENV === 'production' ? '/Tyche/' : '/',
 }
