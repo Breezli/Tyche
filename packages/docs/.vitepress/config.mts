@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Tyche",
   description: "一个仿古希腊风格的组件库",
-  base: '/tyche/',
+  base: '/Tyche/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
