@@ -8,9 +8,16 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+coverage
 dist
 dist-ssr
 *.local
+
+/cyperss/videos/
+/cypress/srceenshots/
+
+.vitepress/dist
+.vitepress/cache
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +31,4 @@ dist-ssr
 *.sw?
 
 *storybook.log
+storybook-static

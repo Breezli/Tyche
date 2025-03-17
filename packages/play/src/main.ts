@@ -1,5 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import TycheElement from 'tyche'
+import TycheUI from 'tyche'
 
-createApp(App).use(TycheElement).mount('#app')
+const app = createApp(App)
+app.use(TycheUI)
+app.mount('#app')
