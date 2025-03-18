@@ -4,15 +4,15 @@ layout: home
 
 hero:
   name: "Tyche"
-  text: "一个仿古希腊风格的组件库"
-  tagline: My great project tagline
+  text: "一个Vue组件库"
+  tagline: 开发中......
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 快速开始
+      link: /get-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: API 示例
+      link: /components/button
 
 features:
   - title: Feature A
