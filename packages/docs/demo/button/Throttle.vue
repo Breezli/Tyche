@@ -1,5 +1,5 @@
 <script setup>
-import { ErMessage } from "tyche";
+// import { ErMessage } from "tyche";
 function handleBtnClick() {
   ErMessage.info("btn click");
 }
