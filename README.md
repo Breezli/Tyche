@@ -1,8 +1,10 @@
-> 施工中，努力搭建ing......
+> 施工ing，正在努力搭建......
 
-### 项目
+组件库地址 [Tyche 组件库](https://breezli.cn/Tyche/)
 
-地址 [Tyche 组件库](https://breezli.cn/Tyche/)
+### 项目简介
+
+采用 **Monorepo** 架构策略
 
 技术栈：**Vue 3 + TypeScript + Vite**
 
@@ -12,7 +14,7 @@
 
 项目部署：**VitePress**站点生成 + **GitHubPages**页面托管 + **github actions CI/CD** 自动化部署
 
-### 开发
+### 测试开发
 
 VitePress组件库项目启动
 
@@ -31,4 +33,3 @@ Vitest单元文件测试
 ```
 pnpm run test
 ```
-
