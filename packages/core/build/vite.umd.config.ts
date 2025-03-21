@@ -53,7 +53,7 @@ export default defineConfig({
     outDir: "dist/umd",
     lib: {
       entry: resolve(__dirname, "../index.ts"),
-      name: "EricUI",
+      name: "TycheUI",
       fileName: "index",
       formats: ["umd"],
     },

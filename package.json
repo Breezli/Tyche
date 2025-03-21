@@ -8,7 +8,13 @@
 		"story": "pnpm --filter @tyche/play storybook",
 		"docs:dev": "pnpm --filter @tyche/docs dev",
 		"docs:build": "pnpm --filter @tyche/docs build",
-		"test": "pnpm --filter @tyche/components test"
+		"test": "pnpm --filter @tyche/components test",
+		"build": "run-s build-hooks build-components",
+		"build-components": "cross-env NODE_ENV=production pnpm --filter tyche build",
+		"build-hooks": "cross-env NODE_ENV=production pnpm --filter @tyche/hooks build",
+		"build:dev": "run-s build-hooks:dev build-components:dev",
+		"build-components:dev": "cross-env NODE_ENV=development pnpm --filter tyche build:watch",
+		"build-hooks:dev": "cross-env NODE_ENV=development pnpm --filter @tyche/hooks build"
 	},
 	"keywords": [],
 	"author": "",
@@ -50,6 +56,8 @@
 		"@tyche/hooks": "workspace:*",
 		"@tyche/theme": "workspace:*",
 		"@tyche/utils": "workspace:*",
+		"@tyche/locale": "workspace:*",
+		"@tyche/constants": "workspace:*",
 		"async-validator": "^4.2.5",
 		"lodash-es": "^4.17.21",
 		"tyche": "workspace:*",

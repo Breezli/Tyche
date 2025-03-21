@@ -86,7 +86,7 @@ export default defineConfig({
     sourcemap: !isProd,
     lib: {
       entry: resolve(__dirname, "../index.ts"),
-      name: "EricUI",
+      name: "TycheUI",
       fileName: "index",
       formats: ["es"],
     },
