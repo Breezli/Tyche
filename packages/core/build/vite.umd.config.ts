@@ -3,7 +3,7 @@ import { readFile } from "fs";
 import { resolve } from "path";
 import { defer, delay } from "lodash-es";
 import { visualizer } from "rollup-plugin-visualizer";
-// import { hooksPlugin as hooks } from "@tyche/vite-plugins";
+import { hooksPlugin as hooks } from "@tyche/vite-plugins";
 import shell from "shelljs";
 
 import vue from "@vitejs/plugin-vue";

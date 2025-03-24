@@ -10,5 +10,6 @@ printLogo();
 library.add(fas);
 const installer = makeInstaller(components);
 
+export * from '@tyche/locale'
 export * from '@tyche/components'
 export default installer

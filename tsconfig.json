@@ -29,5 +29,6 @@
 		"packages/**/*.vue",
 		"packages/play/src/stories/*.stories.ts",
 		"vitest.config.ts"
-	]
+	],
+	"exclude": ["node_modules", "dist"]
 }

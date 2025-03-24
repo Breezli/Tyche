@@ -11,7 +11,7 @@ next:
 
 ```bash
 // 还未实现
-pnpm i @tyche-ui --save
+pnpm i @tyche-monorepo --save
 ```
 
 ## 开始使用
@@ -21,7 +21,7 @@ pnpm i @tyche-ui --save
 
 ```js
 // 引入所有组件
-import TycheUI from '@tyche-ui'
+import TycheUI from '@tyche'
 // 引入样式
 import 'tyche/dist/style.css'
 

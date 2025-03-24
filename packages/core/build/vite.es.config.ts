@@ -3,7 +3,7 @@ import { readdirSync, readdir } from "fs";
 import { resolve } from "path";
 import { defer, delay, filter, map, includes } from "lodash-es";
 import { visualizer } from "rollup-plugin-visualizer";
-// import { hooksPlugin as hooks } from "@tyche/vite-plugins";
+import { hooksPlugin as hooks } from "@tyche/vite-plugins";
 import shell from "shelljs";
 
 import vue from "@vitejs/plugin-vue";
@@ -69,15 +69,15 @@ export default defineConfig({
         keep_fnames: isDev,
       },
     }),
-    // hooks({
-    //   rmFiles: [
-    //     "./dist/es",
-    //     "./dist/theme",
-    //     "./dist/types",
-    //     "./dist/stats.es.html",
-    //   ],
-    //   afterBuild: moveStyles,
-    // }),
+    hooks({
+      rmFiles: [
+        "./dist/es",
+        "./dist/theme",
+        "./dist/types",
+        "./dist/stats.es.html",
+      ],
+      afterBuild: moveStyles,
+    }),
   ],
   build: {
     outDir: "dist/es",
