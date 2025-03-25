@@ -2,13 +2,17 @@ import type { Plugin } from "vue";
 import { describe, it, expect } from "vitest";
 import {
   ErButton,
-  ErButtonGroup
+  ErButtonGroup,
+  ErCollapse,
+  ErCollapseItem
 } from "./index";
 import { map, get } from "lodash-es";
 
 const components = [
   ErButton,
-  ErButtonGroup
+  ErButtonGroup,
+  ErCollapse,
+  ErCollapseItem,
 ] as Plugin[];
 
 describe("components/index.ts", () => {
