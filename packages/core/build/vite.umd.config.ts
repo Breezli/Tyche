@@ -44,10 +44,10 @@ export default defineConfig({
         },
       },
     }),
-    // hooks({
-    //   rmFiles: ["./dist/umd", "./dist/index.css", "./dist/stats.umd.html"],
-    //   afterBuild: moveStyles,
-    // }),
+    hooks({
+      rmFiles: ["./dist/umd", "./dist/index.css", "./dist/stats.umd.html"],
+      afterBuild: moveStyles,
+    }),
   ],
   build: {
     outDir: "dist/umd",
