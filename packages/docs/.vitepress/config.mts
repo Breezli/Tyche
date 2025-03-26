@@ -31,6 +31,7 @@ export default defineConfig({
         items: [
           { text: "Button 按钮", link: "components/button" },
           { text: "Collapse 折叠面板", link: "components/collapse" },
+          { text: "Dropdown 下拉菜单", link: "components/dropdown" },
         ],
       },
     ],
