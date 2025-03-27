@@ -1,6 +1,7 @@
 import type { Plugin } from "vue";
 import { describe, it, expect } from "vitest";
 import {
+  ErAlert,
   ErButton,
   ErButtonGroup,
   ErCollapse,
@@ -12,6 +13,7 @@ import {
 import { map, get } from "lodash-es";
 
 const components = [
+  ErAlert,
   ErButton,
   ErButtonGroup,
   ErCollapse,

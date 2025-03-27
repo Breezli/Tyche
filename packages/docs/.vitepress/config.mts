@@ -34,6 +34,13 @@ export default defineConfig({
           { text: "Dropdown 下拉菜单", link: "components/dropdown" },
         ],
       },
+      {
+        text: "反馈组件",
+        collapsed: false,
+        items: [
+          { text: "Alert 提示", link: "components/alert" },
+        ],
+      },
     ],
 
     socialLinks: [
