@@ -30,7 +30,7 @@
 	const handleBtnClick = (e: MouseEvent) => {
 		emits('click', e)
 	}
-	const handlBtneCLickThrottle = throttle(
+	const handleBtneCLickThrottle = throttle(
 		handleBtnClick,
 		props.throttleDuration
 	)
@@ -62,7 +62,7 @@
 		:autofocus="autofocus"
 		@click="
 			(e: MouseEvent) =>
-				useThrottle ? handlBtneCLickThrottle(e) : handleBtnClick(e)
+				useThrottle ? handleBtneCLickThrottle(e) : handleBtnClick(e)
 		">
 		<template v-if="loading">
 			<slot name="loading">

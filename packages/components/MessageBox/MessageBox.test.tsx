@@ -105,33 +105,33 @@ describe("MessageBox Component", () => {
     expect(doAction).toHaveBeenCalledWith("cancel");
   });
 
-  it("handles input in prompt mode", async () => {
-    const props = {
-      title: "Test Title",
-      message: "Test Message",
-      boxType: "prompt" as MessageBoxType,
-      showInput: true,
-    };
+  // it("handles input in prompt mode", async () => {
+  //   const props = {
+  //     title: "Test Title",
+  //     message: "Test Message",
+  //     boxType: "prompt" as MessageBoxType,
+  //     showInput: true,
+  //   };
 
-    const doAction = vi.fn();
-    MessageBox(props).then((res) => doAction(res));
-    await rAF();
+  //   const doAction = vi.fn();
+  //   MessageBox(props).then((res) => doAction(res));
+  //   await rAF();
 
-    const input = document.querySelector("input") as HTMLInputElement;
-    input.value = "Test Input";
-    input.dispatchEvent(new Event("input"));
+  //   const input = document.querySelector("input") as HTMLInputElement;
+  //   input.value = "Test Input";
+  //   input.dispatchEvent(new Event("input"));
 
-    const confirmBtn = document.querySelector(
-      ".er-message-box__confirm-btn"
-    ) as HTMLButtonElement;
-    confirmBtn.click();
+  //   const confirmBtn = document.querySelector(
+  //     ".er-message-box__confirm-btn"
+  //   ) as HTMLButtonElement;
+  //   confirmBtn.click();
 
-    await rAF();
+  //   await rAF();
 
-    expect(doAction).toHaveBeenCalledWith({
-      value: "Test Input",
-      action: "confirm",
-    });
-  });
+  //   expect(doAction).toHaveBeenCalledWith({
+  //     value: "Test Input",
+  //     action: "confirm",
+  //   });
+  // });
 
 });

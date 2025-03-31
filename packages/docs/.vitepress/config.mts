@@ -26,6 +26,13 @@ export default defineConfig({
         items: [{ text: "快速开始", link: "/get-started" }],
       },
       {
+        text: "外部依赖",
+        collapsed: false,
+        items: [
+          { text: "Icon 图标集", link: "components/icon" }
+        ],
+      },
+      {
         text: "基础组件",
         collapsed: false,
         items: [
