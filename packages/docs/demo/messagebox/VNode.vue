@@ -1,6 +1,6 @@
 <script setup lang="ts">
-	import { h, ref } from 'vue'
-	import { ErMessageBox, ErSwitch, type SwitchValueType } from 'tyche'
+	import { h } from 'vue'
+	import { ErMessageBox } from 'tyche'
 
 	function open1() {
 		ErMessageBox({
@@ -11,23 +11,9 @@
 			]),
 		})
 	}
-
-	function open2() {
-		const checked = ref<SwitchValueType>(false)
-		ErMessageBox({
-			title: 'Message',
-			message: () =>
-				h(ErSwitch, {
-					modelValue: checked.value,
-					'onUpdate:modelValue': (val: SwitchValueType) => {
-						checked.value = val
-					},
-				}),
-		})
-	}
 </script>
 
 <template>
 	<er-button @click="open1" plain>Common VNode</er-button>
-	<er-button @click="open2" plain>Dynamic props</er-button>
+	<!-- <er-button @click="open2" plain>Dynamic props</er-button> -->
 </template>
