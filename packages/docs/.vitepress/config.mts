@@ -41,6 +41,15 @@ export default defineConfig({
           { text: "Alert 提示", link: "components/alert" },
         ],
       },
+      {
+        text: "数据展示",
+        collapsed: false,
+        items: [
+          { text: "Tooltip 提示", link: "components/tooltip" },
+          { text: "Message 消息提示", link: "components/message" },
+          { text: "MessageBox 弹框", link: "components/messagebox" },
+        ],
+      },
     ],
 
     socialLinks: [

@@ -9,6 +9,8 @@ import {
   ErDropdown,
   ErDropdownItem,
   ErTooltip,
+  ErMessage,
+  ErMessageBox,
 } from "./index";
 import { map, get } from "lodash-es";
 
@@ -21,6 +23,8 @@ const components = [
   ErDropdown,
   ErDropdownItem,
   ErTooltip,
+  ErMessage,
+  ErMessageBox,
 ] as Plugin[];
 
 describe("components/index.ts", () => {

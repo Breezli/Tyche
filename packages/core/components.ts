@@ -6,6 +6,9 @@ import {
 	ErDropdown,
 	ErDropdownItem,
 	ErAlert,
+	ErTooltip,
+	ErMessage,
+	ErMessageBox,
 } from '@tyche/components'
 import type { Plugin } from 'vue'
 
@@ -17,4 +20,7 @@ export default [
 	ErDropdown,
 	ErDropdownItem,
 	ErAlert,
+	ErTooltip,
+	ErMessage,
+	ErMessageBox,
 ] as Plugin[]
