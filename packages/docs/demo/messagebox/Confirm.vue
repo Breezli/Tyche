@@ -1,21 +1,21 @@
 <script setup lang="ts">
-	import { ErMessageBox, ErMessage } from 'tyche'
+	import { VrMessageBox, VrMessage } from 'veyra'
 
 	function openConfirm() {
-		ErMessageBox.confirm(
+		VrMessageBox.confirm(
 			'proxy will permanently delete the file. Continue?',
 			'Warning',
 			{ type: 'warning' }
 		)
 			.then((action) => {
-				ErMessage.info(`action: ${action}`)
+				VrMessage.info(`action: ${action}`)
 			})
 			.catch((action) => {
-				ErMessage.warning(`action: ${action}`)
+				VrMessage.warning(`action: ${action}`)
 			})
 	}
 </script>
 
 <template>
-	<er-button @click="openConfirm" plain> Click to open the Confirm</er-button>
+	<vr-button @click="openConfirm" plain> Click to open the Confirm</vr-button>
 </template>

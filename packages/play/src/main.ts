@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import TycheUI from 'tyche'
+import VeyraUI from 'veyra'
 
 const app = createApp(App)
-app.use(TycheUI)
+app.use(VeyraUI)
 app.mount('#app')

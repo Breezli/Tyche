@@ -1,7 +1,7 @@
 import { describe, test, it, expect, vi, beforeEach } from 'vitest'
-import { withInstall } from '@tyche/utils'
+import { withInstall } from '@veyra/utils'
 import { mount } from '@vue/test-utils'
-import { ErTooltip } from '.'
+import { VrTooltip } from '.'
 
 import Tooltip from './Tooltip.vue'
 
@@ -12,18 +12,18 @@ const onVisibleChange = vi.fn()
 describe('Tooltip/index.ts', () => {
 	// 测试 withInstall 函数是否被正确应用
 	it('should be exported with withInstall()', () => {
-		expect(ErTooltip.install).toBeDefined()
+		expect(VrTooltip.install).toBeDefined()
 	})
 
 	// 测试 Tooltip 组件是否被正确导出
 	it('should be exported Tooltip component', () => {
-		expect(ErTooltip).toBe(Tooltip)
+		expect(VrTooltip).toBe(Tooltip)
 	})
 
 	// 可选：测试 withInstall 是否增强了 Tooltip 组件的功能
 	test('should enhance Tooltip component', () => {
 		const enhancedTooltip = withInstall(Tooltip)
-		expect(enhancedTooltip).toBe(ErTooltip)
+		expect(enhancedTooltip).toBe(VrTooltip)
 		// 这里可以添加更多测试，确保 withInstall 增强了组件的特定功能
 	})
 
@@ -59,19 +59,19 @@ describe('Tooltip.vue', () => {
 		)
 		const triggerArea = wrapper.find('#trigger')
 		expect(triggerArea.exists()).toBeTruthy()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeFalsy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeFalsy()
 
 		// 弹出层是否出现
 		triggerArea.trigger('click')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeTruthy()
-		expect(wrapper.get('.er-tooltip__popper').text()).toBe('hello tooltip')
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeTruthy()
+		expect(wrapper.get('.vr-tooltip__popper').text()).toBe('hello tooltip')
 		expect(onVisibleChange).toHaveBeenCalledWith(true)
 
 		// 再次点击
 		triggerArea.trigger('click')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeFalsy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeFalsy()
 		expect(onVisibleChange).toHaveBeenCalledTimes(2)
 
 		// 等待动画
@@ -79,11 +79,11 @@ describe('Tooltip.vue', () => {
 
 		triggerArea.trigger('click')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeTruthy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeTruthy()
 		// 区域外点击关闭 tooltip
 		wrapper.get('#outside').trigger('click')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeFalsy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeFalsy()
 		expect(onVisibleChange).toHaveBeenCalledTimes(4)
 
 		// 注销流程
@@ -96,13 +96,13 @@ describe('Tooltip.vue', () => {
 			props: { trigger: 'hover', content: 'test' },
 		})
 		// 测试悬停显示
-		wrapper.find('.er-tooltip__trigger').trigger('mouseenter')
+		wrapper.find('.vr-tooltip__trigger').trigger('mouseenter')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeTruthy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeTruthy()
 		// 测试悬外隐藏
-		wrapper.find('.er-tooltip').trigger('mouseleave')
+		wrapper.find('.vr-tooltip').trigger('mouseleave')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeFalsy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeFalsy()
 	})
 
 	// 右键菜单触发的测试
@@ -112,9 +112,9 @@ describe('Tooltip.vue', () => {
 			props: { trigger: 'contextmenu', content: 'test' },
 		})
 		// 测试右键菜单显示
-		wrapper.find('.er-tooltip__trigger').trigger('contextmenu')
+		wrapper.find('.vr-tooltip__trigger').trigger('contextmenu')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeTruthy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeTruthy()
 		// 测试右键菜单隐藏（可以模拟点击外部区域）
 	})
 
@@ -127,10 +127,10 @@ describe('Tooltip.vue', () => {
 		// 测试手动触发显示和隐藏
 		wrapper.vm.show() // 假设 show 方法可以通过某种方式访问
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeTruthy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeTruthy()
 		wrapper.vm.hide()
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeFalsy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeFalsy()
 	})
 
 	// 禁用状态的测试
@@ -140,9 +140,9 @@ describe('Tooltip.vue', () => {
 			props: { disabled: true, content: 'test' },
 		})
 		// 测试禁用状态下点击不会触发显示
-		wrapper.find('.er-tooltip__trigger').trigger('click')
+		wrapper.find('.vr-tooltip__trigger').trigger('click')
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeFalsy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeFalsy()
 	})
 
 	// 虚拟触发节点的测试
@@ -155,6 +155,6 @@ describe('Tooltip.vue', () => {
 		// 测试虚拟节点的事件触发
 		virtualRef.dispatchEvent(new Event('mouseenter'))
 		await vi.runAllTimers()
-		expect(wrapper.find('.er-tooltip__popper').exists()).toBeTruthy()
+		expect(wrapper.find('.vr-tooltip__popper').exists()).toBeTruthy()
 	})
 })

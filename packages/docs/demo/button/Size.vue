@@ -1,23 +1,23 @@
 <template>
-  <p>
-    <er-button size="large">Large</er-button>
-    <er-button>Default</er-button>
-    <er-button size="small">Small</er-button>
-    <er-button size="large" icon="search">Search</er-button>
-    <er-button icon="search">Search</er-button>
-    <er-button size="small" icon="search">Search</er-button>
-  </p>
-  <p>
-    <er-button size="large" round>Large</er-button>
-    <er-button round>Default</er-button>
-    <er-button size="small" round>Small</er-button>
-    <er-button size="large" icon="search" round>Search</er-button>
-    <er-button icon="search" round>Search</er-button>
-    <er-button size="small" icon="search" round>Search</er-button>
-  </p>
-  <p>
-    <er-button size="large" icon="search" circle />
-    <er-button icon="search" circle />
-    <er-button size="small" icon="search" circle />
-  </p>
+	<p>
+		<vr-button size="large">Large</vr-button>
+		<vr-button>Default</vr-button>
+		<vr-button size="small">Small</vr-button>
+		<vr-button size="large" icon="search">Search</vr-button>
+		<vr-button icon="search">Search</vr-button>
+		<vr-button size="small" icon="search">Search</vr-button>
+	</p>
+	<p>
+		<vr-button size="large" round>Large</vr-button>
+		<vr-button round>Default</vr-button>
+		<vr-button size="small" round>Small</vr-button>
+		<vr-button size="large" icon="search" round>Search</vr-button>
+		<vr-button icon="search" round>Search</vr-button>
+		<vr-button size="small" icon="search" round>Search</vr-button>
+	</p>
+	<p>
+		<vr-button size="large" icon="search" circle />
+		<vr-button icon="search" circle />
+		<vr-button size="small" icon="search" circle />
+	</p>
 </template>

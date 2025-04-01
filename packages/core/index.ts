@@ -1,15 +1,15 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fas } from "@fortawesome/free-solid-svg-icons";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import makeInstaller from './makeInstaller'
 import components from './components'
-import printLogo from "./pringLogo";
-import '@tyche/theme/index.css'
+import printLogo from './pringLogo'
+import '@veyra/theme/index.css'
 
-printLogo();
+printLogo()
 
-library.add(fas);
-const installer = makeInstaller(components);
+library.add(fas)
+const installer = makeInstaller(components)
 
-export * from '@tyche/locale'
-export * from '@tyche/components'
+export * from '@veyra/locale'
+export * from '@veyra/components'
 export default installer

@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-	<er-button type="primary" size="default" round="true">test</er-button>
+	<vr-button type="primary" size="default" round="true">test</vr-button>
 </template>

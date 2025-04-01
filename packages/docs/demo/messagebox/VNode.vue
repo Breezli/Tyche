@@ -1,9 +1,9 @@
 <script setup lang="ts">
 	import { h } from 'vue'
-	import { ErMessageBox } from 'tyche'
+	import { VrMessageBox } from 'veyra'
 
 	function open1() {
-		ErMessageBox({
+		VrMessageBox({
 			title: 'Message',
 			message: h('p', null, [
 				h('span', null, 'Message can be '),
@@ -14,6 +14,6 @@
 </script>
 
 <template>
-	<er-button @click="open1" plain>Common VNode</er-button>
-	<!-- <er-button @click="open2" plain>Dynamic props</er-button> -->
+	<vr-button @click="open1" plain>Common VNode</vr-button>
+	<!-- <vr-button @click="open2" plain>Dynamic props</vr-button> -->
 </template>

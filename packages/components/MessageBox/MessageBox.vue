@@ -4,15 +4,15 @@
 	import type { MessageBoxProps, MessageBoxAction } from './types'
 	// import type { InputInstance } from '../Input/types'
 
-	import ErOverlay from '../Overlay/Overlay.vue'
-	import ErIcon from '../Icon/Icon.vue'
-	import ErButton from '../Button/Button.vue'
-	// import ErInput from '../Input/Input.vue'
+	import VrOverlay from '../Overlay/Overlay.vue'
+	import VrIcon from '../Icon/Icon.vue'
+	import VrButton from '../Button/Button.vue'
+	// import VrInput from '../Input/Input.vue'
 
-	import { useId, useZIndex } from '@tyche/hooks'
-	import { typeIconMap } from '@tyche/utils'
+	import { useId, useZIndex } from '@veyra/hooks'
+	import { typeIconMap } from '@veyra/utils'
 
-	defineOptions({ name: 'ErMessageBox', inheritAttrs: false })
+	defineOptions({ name: 'VrMessageBox', inheritAttrs: false })
 
 	const props = withDefaults(defineProps<MessageBoxProps>(), {
 		lockScroll: true,
@@ -85,15 +85,15 @@
 
 <template>
 	<transition name="fade-in-linear" @after-leave="destroy">
-		<er-overlay v-show="(visible as Ref).value" :z-index="state.zIndex" mask>
+		<vr-overlay v-show="(visible as Ref).value" :z-index="state.zIndex" mask>
 			<div
 				role="dialog"
-				class="er-overlay-message-box"
+				class="vr-overlay-message-box"
 				@click="handleWrapperClick">
 				<div
 					ref="rootRef"
 					:class="[
-						'er-message-box',
+						'vr-message-box',
 						{
 							'is-center': state.center,
 						},
@@ -102,32 +102,32 @@
 					<div
 						v-if="!isNil(state.title)"
 						ref="headerRef"
-						class="er-message-box__header"
+						class="vr-message-box__header"
 						:class="{ 'show-close': state.showClose }">
-						<div class="er-message-box__title">
-							<er-icon
+						<div class="vr-message-box__title">
+							<vr-icon
 								v-if="iconComponent && state.center"
 								:class="{
-									[`er-icon-${state.type}`]: state.type,
+									[`vr-icon-${state.type}`]: state.type,
 								}"
 								:icon="iconComponent" />
 							{{ state.title }}
 						</div>
 						<button
 							v-if="showClose"
-							class="er-message-box__header-btn"
+							class="vr-message-box__header-btn"
 							@click.stop="handleClose">
-							<er-icon icon="xmark" />
+							<vr-icon icon="xmark" />
 						</button>
 					</div>
-					<div class="er-message-box__content">
-						<er-icon
+					<div class="vr-message-box__content">
+						<vr-icon
 							v-if="iconComponent && !state.center && hasMessage"
 							:class="{
-								[`er-icon-${state.type}`]: state.type,
+								[`vr-icon-${state.type}`]: state.type,
 							}"
 							:icon="iconComponent" />
-						<div v-if="hasMessage" class="er-message-box__message">
+						<div v-if="hasMessage" class="vr-message-box__message">
 							<slot>
 								<component
 									:is="state.showInput ? 'label' : 'p'"
@@ -137,39 +137,39 @@
 							</slot>
 						</div>
 					</div>
-					<div v-show="state.showInput" class="er-message-box__input">
-						<er-input
+					<div v-show="state.showInput" class="vr-message-box__input">
+						<vr-input
 							v-model="state.inputValue"
 							ref="inputRef"
 							:placeholder="state.inputPlaceholder"
 							:type="state.inputType"
 							@keyup.enter="handleInputEnter" />
 					</div>
-					<div class="er-message-box__footer">
-						<er-button
+					<div class="vr-message-box__footer">
+						<vr-button
 							v-if="state.showCancelButton"
-							class="er-message-box__footer-btn er-message-box__cancel-btn"
+							class="vr-message-box__footer-btn vr-message-box__cancel-btn"
 							:type="state.cancelButtonType"
 							:round="state.roundButton"
 							:loading="state.cancelButtonLoading"
 							@click="handleAction('cancel')"
 							@keydown.prevent.enter="handleAction('cancel')"
-							>{{ state.cancelButtonText }}</er-button
+							>{{ state.cancelButtonText }}</vr-button
 						>
-						<er-button
+						<vr-button
 							v-show="state.showConfirmButton"
-							class="er-message-box__footer-btn er-message-box__confirm-btn"
+							class="vr-message-box__footer-btn vr-message-box__confirm-btn"
 							:type="state.confirmButtonType ?? 'primary'"
 							:round="state.roundButton"
 							:loading="state.confirmButtonLoading"
 							@click="handleAction('confirm')"
 							@keydown.prevent.enter="handleAction('confirm')"
-							>{{ state.confirmButtonText }}</er-button
+							>{{ state.confirmButtonText }}</vr-button
 						>
 					</div>
 				</div>
 			</div>
-		</er-overlay>
+		</vr-overlay>
 	</transition>
 </template>
 

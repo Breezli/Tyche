@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { type DropdownItemProps } from 'tyche'
+	import { type DropdownItemProps } from 'veyra'
 
 	const items: DropdownItemProps[] = [
 		{ command: '1', label: 'Action 1' },
@@ -13,30 +13,30 @@
 	<div class="row">
 		<div class="col">
 			<div class="desc">hover to trigger</div>
-			<er-dropdown :items="items">
+			<vr-dropdown :items="items">
 				<span class="dropdown-link">
 					Dropdown List
-					<er-icon icon="angle-down" />
+					<vr-icon icon="angle-down" />
 				</span>
-			</er-dropdown>
+			</vr-dropdown>
 		</div>
 		<div class="col">
 			<div class="desc">click to trigger</div>
-			<er-dropdown :items="items" trigger="click">
+			<vr-dropdown :items="items" trigger="click">
 				<span class="dropdown-link">
 					Dropdown List
-					<er-icon icon="angle-down" />
+					<vr-icon icon="angle-down" />
 				</span>
-			</er-dropdown>
+			</vr-dropdown>
 		</div>
 		<div class="col">
 			<div class="desc">right click to trigger</div>
-			<er-dropdown :items="items" trigger="contextmenu">
+			<vr-dropdown :items="items" trigger="contextmenu">
 				<span class="dropdown-link">
 					Dropdown List
-					<er-icon icon="angle-down" />
+					<vr-icon icon="angle-down" />
 				</span>
-			</er-dropdown>
+			</vr-dropdown>
 		</div>
 	</div>
 </template>
@@ -51,7 +51,7 @@
 	}
 	.desc {
 		display: block;
-		color: var(--er-text-color-secondary);
+		color: var(--vr-text-color-secondary);
 		font-size: 14px;
 		margin-bottom: 20px;
 	}
@@ -59,7 +59,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		color: var(--er-color-primary);
+		color: var(--vr-color-primary);
 		i {
 			margin-left: 8px;
 		}

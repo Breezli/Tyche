@@ -1,17 +1,17 @@
-import MessageBox from "./methods";
-import { set } from "lodash-es";
+import MessageBox from './methods'
+import { set } from 'lodash-es'
 
-import type { App } from "vue";
+import type { App } from 'vue'
 
-export const ErMessageBox = MessageBox;
+export const VrMessageBox = MessageBox
 
-set(ErMessageBox, "install", (app: App) => {
-  app.config.globalProperties.$msgbox = MessageBox;
-  app.config.globalProperties.$messageBox = MessageBox;
-  app.config.globalProperties.$alert = MessageBox.alert;
-  app.config.globalProperties.$confirm = MessageBox.confirm;
-  app.config.globalProperties.$prompt = MessageBox.prompt;
-});
+set(VrMessageBox, 'install', (app: App) => {
+	app.config.globalProperties.$msgbox = MessageBox
+	app.config.globalProperties.$messageBox = MessageBox
+	app.config.globalProperties.$alert = MessageBox.alert
+	app.config.globalProperties.$confirm = MessageBox.confirm
+	app.config.globalProperties.$prompt = MessageBox.prompt
+})
 
-export default ErMessageBox;
-export * from "./types";
+export default VrMessageBox
+export * from './types'

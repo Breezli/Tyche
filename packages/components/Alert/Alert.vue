@@ -1,11 +1,11 @@
 <script setup lang="ts">
 	import type { AlertProps, AlertEmits, AlertInstance } from './types'
 	import { ref, useSlots, computed } from 'vue'
-	import { typeIconMap } from '@tyche/utils'
-	import ErIcon from '../Icon/Icon.vue'
+	import { typeIconMap } from '@veyra/utils'
+	import VrIcon from '../Icon/Icon.vue'
 
 	defineOptions({
-		name: 'ErAlert',
+		name: 'VrAlert',
 	})
 	const props = withDefaults(defineProps<AlertProps>(), {
 		effect: 'light',
@@ -36,33 +36,33 @@
 </script>
 
 <template>
-	<transition name="er-alert-fade">
+	<transition name="vr-alert-fade">
 		<div
 			v-show="visible"
-			class="er-alert"
+			class="vr-alert"
 			role="alert"
 			:class="{
-				[`er-alert__${type}`]: type,
-				[`er-alert__${effect}`]: effect,
+				[`vr-alert__${type}`]: type,
+				[`vr-alert__${effect}`]: effect,
 				'text-center': center,
 			}">
-			<er-icon
+			<vr-icon
 				v-if="showIcon"
-				class="er-alert__icon"
+				class="vr-alert__icon"
 				:class="{ 'big-icon': withDescription }"
 				:icon="iconName" />
-			<div class="er-alert__content">
+			<div class="vr-alert__content">
 				<span
-					class="er-alert__title"
+					class="vr-alert__title"
 					:class="{ 'with-desc': withDescription }"
 					:style="{ display: center && !showIcon ? 'flow' : 'inline' }">
 					<slot name="title">{{ title }}</slot>
 				</span>
-				<p class="er-alert__description">
+				<p class="vr-alert__description">
 					<slot>{{ description }}</slot>
 				</p>
-				<div class="er-alert__close" v-if="closable">
-					<er-icon @click.stop="close" icon="xmark" />
+				<div class="vr-alert__close" v-if="closable">
+					<vr-icon @click.stop="close" icon="xmark" />
 				</div>
 			</div>
 		</div>

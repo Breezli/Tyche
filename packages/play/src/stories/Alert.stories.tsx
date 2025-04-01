@@ -1,14 +1,14 @@
 import type { StoryObj, Meta, ArgTypes } from '@storybook/vue3'
 import { ref, watch } from 'vue'
 import { fn } from '@storybook/test'
-import { ErAlert, type AlertInstance } from 'tyche'
-import 'tyche/dist/theme/Alert.css'
+import { VrAlert, type AlertInstance } from 'veyra'
+import 'veyra/dist/theme/Alert.css'
 
-type Story = StoryObj<typeof ErAlert> & { argTypes?: ArgTypes }
+type Story = StoryObj<typeof VrAlert> & { argTypes?: ArgTypes }
 
-const meta: Meta<typeof ErAlert> = {
+const meta: Meta<typeof VrAlert> = {
 	title: 'Example/Alert',
-	component: ErAlert,
+	component: VrAlert,
 	tags: ['autodocs'],
 	argTypes: {
 		type: {
@@ -39,7 +39,7 @@ export const Default: Story & { args: { visible: boolean } } = {
 		visible: true,
 	},
 	render: (args) => ({
-		components: { ErAlert },
+		components: { VrAlert },
 		setup() {
 			const alertRef = ref<AlertInstance>()
 			watch(
@@ -55,7 +55,7 @@ export const Default: Story & { args: { visible: boolean } } = {
 			return { args, alertRef }
 		},
 		template: `
-     <er-alert ref="alertRef" v-bind="args"></er-alert>
+     <vr-alert ref="alertRef" v-bind="args"></vr-alert>
     `,
 	}),
 }

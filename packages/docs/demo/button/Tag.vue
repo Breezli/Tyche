@@ -1,13 +1,12 @@
 <template>
-  <er-button>button</er-button>
-  <er-button tag="div" role="button" tabindex="0">div</er-button>
-  <er-button
-    type="primary"
-    tag="a"
-    href="https://breezli.cn/Tyche/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    a
-  </er-button>
+	<vr-button>button</vr-button>
+	<vr-button tag="div" role="button" tabindex="0">div</vr-button>
+	<vr-button
+		type="primary"
+		tag="a"
+		href="https://breezli.cn/veyra/"
+		target="_blank"
+		rel="noopener noreferrer">
+		a
+	</vr-button>
 </template>

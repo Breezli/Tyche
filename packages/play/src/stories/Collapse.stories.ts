@@ -1,45 +1,45 @@
-import type { Meta, StoryObj } from "@storybook/vue3";
-import { ErCollapse, ErCollapseItem } from "tyche";
-import 'tyche/dist/theme/Collapse.css'
+import type { Meta, StoryObj } from '@storybook/vue3'
+import { VrCollapse, VrCollapseItem } from 'veyra'
+import 'veyra/dist/theme/Collapse.css'
 
-type Story = StoryObj<typeof ErCollapse>;
+type Story = StoryObj<typeof VrCollapse>
 
-const meta: Meta<typeof ErCollapse> = {
-  title: "Example/collapse",
-  component: ErCollapse,
-  subcomponents: { ErCollapseItem },
-  tags: ["autodocs"],
-};
+const meta: Meta<typeof VrCollapse> = {
+	title: 'Example/collapse',
+	component: VrCollapse,
+	subcomponents: { VrCollapseItem },
+	tags: ['autodocs'],
+}
 
 export const Default: Story = {
-  render: (args) => ({
-    components: {
-      ErCollapse,
-      ErCollapseItem,
-    },
-    setup() {
-      return {
-        args,
-      };
-    },
-    template: `
-    <er-collapse v-bind="args">
-      <er-collapse-item name="a" title="Title a">
+	render: (args) => ({
+		components: {
+			VrCollapse,
+			VrCollapseItem,
+		},
+		setup() {
+			return {
+				args,
+			}
+		},
+		template: `
+    <vr-collapse v-bind="args">
+      <vr-collapse-item name="a" title="Title a">
         <div>this is content a</div>
-      </er-collapse-item>
-      <er-collapse-item name="b" title="title b">
+      </vr-collapse-item>
+      <vr-collapse-item name="b" title="title b">
         <div>this is content b</div>
-      </er-collapse-item>
-      <er-collapse-item name="c" title="title c  disable" disabled>
+      </vr-collapse-item>
+      <vr-collapse-item name="c" title="title c  disable" disabled>
         <div>this is content c</div>
-      </er-collapse-item>
-    </er-collapse>
+      </vr-collapse-item>
+    </vr-collapse>
     `,
-  }),
-  args: {
-    accordion: true,
-    modelValue: ["a"],
-  },
-};
+	}),
+	args: {
+		accordion: true,
+		modelValue: ['a'],
+	},
+}
 
-export default meta;
+export default meta

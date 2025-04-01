@@ -1,17 +1,16 @@
 <script lang="ts" setup>
-import { ref } from "vue";
+	import { ref } from 'vue'
 
-const disabled = ref(false);
+	const disabled = ref(false)
 </script>
 
 <template>
-  <er-tooltip
-    :disabled="disabled"
-    content="click to close tooltip function"
-    placement="bottom"
-  >
-    <er-button @click="disabled = !disabled"
-      >click to {{ disabled ? "active" : "close" }} tooltip function</er-button
-    >
-  </er-tooltip>
+	<vr-tooltip
+		:disabled="disabled"
+		content="click to close tooltip function"
+		placement="bottom">
+		<vr-button @click="disabled = !disabled"
+			>click to {{ disabled ? 'active' : 'close' }} tooltip function</vr-button
+		>
+	</vr-tooltip>
 </template>

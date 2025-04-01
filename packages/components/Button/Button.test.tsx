@@ -5,7 +5,7 @@ import type { ButtonProps } from './types' //引入组件的 props 类型定义�
 
 describe('Button.vue', () => {
 	// type 属性的类名测试
-	it('type 属性被设置时，组件添加了对应的类名（如 er-button--primary）', () => {
+	it('type 属性被设置时，组件添加了对应的类名（如 vr-button--primary）', () => {
 		const types = ['primary', 'success', 'warning', 'danger', 'info'] //包含所有可能的 type 值
 		types.forEach((type) => {
 			//遍历每个type类型
@@ -13,18 +13,18 @@ describe('Button.vue', () => {
 				//通过 mount 挂载 Button 组件，并传递当前 type 值作为 props
 				props: { type: type as ButtonProps['type'] },
 			})
-			expect(wrapper.classes()).toContain(`er-button--${type}`) //断言类名是否包含 er-button--${type}
+			expect(wrapper.classes()).toContain(`vr-button--${type}`) //断言类名是否包含 vr-button--${type}
 		})
 	})
 
 	// size 属性的类名测试
-	it('size 属性被设置时，组件添加了对应的类名（如 er-button--large）', () => {
+	it('size 属性被设置时，组件添加了对应的类名（如 vr-button--large）', () => {
 		const sizes = ['large', 'default', 'small']
 		sizes.forEach((size) => {
 			const wrapper = mount(Button, {
 				props: { size: size as ButtonProps['size'] },
 			})
-			expect(wrapper.classes()).toContain(`er-button--${size}`)
+			expect(wrapper.classes()).toContain(`vr-button--${size}`)
 		})
 	})
 

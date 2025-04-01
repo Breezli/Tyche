@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-	import { ErMessage } from 'tyche'
+	import { VrMessage } from 'veyra'
 
 	const openCenter = () => {
-		ErMessage({
+		VrMessage({
 			showClose: true,
 			message: 'Centered text',
 			center: true,
@@ -11,5 +11,5 @@
 </script>
 
 <template>
-	<er-button plain @click="openCenter">Centered text</er-button>
+	<vr-button plain @click="openCenter">Centered text</vr-button>
 </template>

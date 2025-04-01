@@ -2,7 +2,7 @@
 	import { createPopper, type Instance } from '@popperjs/core'
 	import { ref, watch, watchEffect, onUnmounted, computed, type Ref } from 'vue'
 	import { bind, debounce, type DebouncedFunc } from 'lodash-es'
-	import { useClickOutside } from '@tyche/hooks'
+	import { useClickOutside } from '@veyra/hooks'
 
 	import type { TooltipProps, TooltipEmits, TooltipInstance } from './types'
 	import type { ButtonInstance } from '../Button'
@@ -10,7 +10,7 @@
 	import useEvenstToTiggerNode from './useEventsToTiggerNode'
 
 	defineOptions({
-		name: 'ErTooltip',
+		name: 'VrTooltip',
 	})
 
 	interface _TooltipProps extends TooltipProps {
@@ -212,9 +212,9 @@
 </script>
 
 <template>
-	<div class="er-tooltip" ref="containerNode" v-on="outerEvents">
+	<div class="vr-tooltip" ref="containerNode" v-on="outerEvents">
 		<div
-			class="er-tooltip__trigger"
+			class="vr-tooltip__trigger"
 			ref="_triggerNode"
 			v-on="events"
 			v-if="!virtualTriggering">
@@ -224,7 +224,7 @@
 
 		<transition :name="transition" @after-leave="destroyPopperInstance">
 			<div
-				class="er-tooltip__popper"
+				class="vr-tooltip__popper"
 				ref="popperNode"
 				v-on="dropdownEvents"
 				v-if="visible">

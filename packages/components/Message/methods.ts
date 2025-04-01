@@ -11,7 +11,7 @@ import type {
 import { messageTypes } from './types'
 import { render, h, shallowReactive, isVNode } from 'vue'
 import { findIndex, get, each, set, isString } from 'lodash-es'
-import { useZIndex, useId } from '@tyche/hooks'
+import { useZIndex, useId } from '@veyra/hooks'
 import MessageConstructor from './Message.vue'
 
 const instances: MessageInstance[] = shallowReactive([])

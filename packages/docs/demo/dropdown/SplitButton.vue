@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { type DropdownItemProps, ErMessage } from 'tyche'
+	import { type DropdownItemProps, VrMessage } from 'veyra'
 
 	const items: DropdownItemProps[] = [
 		{ command: '1', label: 'Action 1' },
@@ -9,25 +9,25 @@
 	]
 
 	function handleClick() {
-		ErMessage.info('button click')
+		VrMessage.info('button click')
 	}
 </script>
 
 <template>
 	<div class="row">
-		<er-dropdown :items="items">
-			<er-button type="primary">
+		<vr-dropdown :items="items">
+			<vr-button type="primary">
 				Dropdown List
-				<er-icon icon="angle-down" style="margin-left: 8px" />
-			</er-button>
-		</er-dropdown>
-		<er-dropdown
+				<vr-icon icon="angle-down" style="margin-left: 8px" />
+			</vr-button>
+		</vr-dropdown>
+		<vr-dropdown
 			:items="items"
 			type="primary"
 			@click="handleClick"
 			split-button>
 			Dropdown List
-		</er-dropdown>
+		</vr-dropdown>
 	</div>
 </template>
 

@@ -1,16 +1,16 @@
 {
-  "name": "@tyche/components",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
-  "scripts": {
-    "test": "vitest --coverage"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.4.1",
-  "devDependencies": {
-    "axios": "^1.6.8"
-  }
+	"name": "@veyra/components",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.ts",
+	"scripts": {
+		"test": "vitest --coverage"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.4.1",
+	"devDependencies": {
+		"axios": "^1.6.8"
+	}
 }

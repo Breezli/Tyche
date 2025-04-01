@@ -3,12 +3,12 @@
 	import { computed, onMounted, ref, watch } from 'vue'
 	import { getLastBottomOffset } from './methods'
 	import { delay, bind } from 'lodash-es'
-	import { useEventListener, useOffset } from '@tyche/hooks'
-	import { RenderVnode, typeIconMap } from '@tyche/utils'
-	import ErIcon from '../Icon/Icon.vue'
+	import { useEventListener, useOffset } from '@veyra/hooks'
+	import { RenderVnode, typeIconMap } from '@veyra/utils'
+	import VrIcon from '../Icon/Icon.vue'
 
 	defineOptions({
-		name: 'ErMessage',
+		name: 'VrMessage',
 	})
 
 	const props = withDefaults(defineProps<MessageProps>(), {
@@ -80,9 +80,9 @@
 		@after-leave="!visible && onDestory()">
 		<div
 			ref="messageRef"
-			class="er-message"
+			class="vr-message"
 			:class="{
-				[`er-message--${type}`]: type,
+				[`vr-message--${type}`]: type,
 				'is-close': showClose,
 				'text-center': center,
 			}"
@@ -91,14 +91,14 @@
 			role="alert"
 			@mouseenter="clearTimer"
 			@mouseleave="startTimmer">
-			<er-icon class="er-message__icon" :icon="iconName" />
-			<div class="er-message__content">
+			<vr-icon class="vr-message__icon" :icon="iconName" />
+			<div class="vr-message__content">
 				<slot>
 					<render-vnode v-if="message" :vNode="message" />
 				</slot>
 			</div>
-			<div class="er-message__close" v-if="showClose">
-				<er-icon icon="xmark" @click.stop="close" />
+			<div class="vr-message__close" v-if="showClose">
+				<vr-icon icon="xmark" @click.stop="close" />
 			</div>
 		</div>
 	</Transition>

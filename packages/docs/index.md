@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: 'Tyche'
-  text: '仿Element Plus 制作的 Vue3 组件库'
-  tagline: 融合工程化实践与AI生产力的现代前端开发套件
+  name: 'Veyra'
+  text: ''
+  tagline: 仿Element Plus 制作的 Vue3 组件库
   actions:
     - theme: brand
       text: 快速接入
@@ -14,7 +14,7 @@ hero:
       link: /components/button
     - theme: alt
       text: NPM 查看
-      link: https://www.npmjs.com/package/tyche-core
+      link: https://www.npmjs.com/package/veyra-core
 
 features:
   - title: 🧩 智能开发范式

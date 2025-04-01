@@ -1,17 +1,17 @@
 <script setup lang="ts">
-	import { ErMessageBox, ErMessage } from 'tyche'
+	import { VrMessageBox, VrMessage } from 'veyra'
 
 	function openAlert() {
-		ErMessageBox.alert('This is a message', 'Title')
+		VrMessageBox.alert('This is a message', 'Title')
 			.then((action) => {
-				ErMessage.info(`action: ${action}`)
+				VrMessage.info(`action: ${action}`)
 			})
 			.catch((action) => {
-				ErMessage.warning(`action: ${action}`)
+				VrMessage.warning(`action: ${action}`)
 			})
 	}
 </script>
 
 <template>
-	<er-button @click="openAlert" plain> Click to open the Alert</er-button>
+	<vr-button @click="openAlert" plain> Click to open the Alert</vr-button>
 </template>

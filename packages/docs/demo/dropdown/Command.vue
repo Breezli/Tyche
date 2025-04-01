@@ -2,8 +2,8 @@
 	import {
 		type DropdownItemProps,
 		type DropdownCommand,
-		ErMessage,
-	} from 'tyche'
+		VrMessage,
+	} from 'veyra'
 
 	const items: DropdownItemProps[] = [
 		{ command: '1', label: 'Action 1' },
@@ -13,17 +13,17 @@
 	]
 
 	function handleCommand(command: DropdownCommand) {
-		ErMessage.info('click on item ' + command)
+		VrMessage.info('click on item ' + command)
 	}
 </script>
 
 <template>
-	<er-dropdown :items="items" @command="handleCommand">
+	<vr-dropdown :items="items" @command="handleCommand">
 		<span class="dropdown-link">
 			Dropdown List
-			<er-icon icon="angle-down" />
+			<vr-icon icon="angle-down" />
 		</span>
-	</er-dropdown>
+	</vr-dropdown>
 </template>
 
 <style scoped>
@@ -31,7 +31,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		color: var(--er-color-primary);
+		color: var(--vr-color-primary);
 
 		i {
 			margin-left: 8px;

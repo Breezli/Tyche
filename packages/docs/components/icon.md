@@ -24,3 +24,9 @@ prev:
 ::: tip
 可以通过组合 `size` 和 `color` 属性快速调整图标样式，满足不同场景需求。
 :::
+
+### Slots
+
+| Name    | Description | Sub Component |
+| ------- | ----------- | ------------- |
+| default | 默认插槽    | Button        |

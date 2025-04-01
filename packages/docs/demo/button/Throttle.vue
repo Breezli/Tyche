@@ -1,15 +1,15 @@
 <script setup>
-// import { ErMessage } from "tyche";
-function handleBtnClick() {
-  ErMessage.info("btn click");
-}
+	// import { VrMessage } from "veyra";
+	function handleBtnClick() {
+		VrMessage.info('btn click')
+	}
 </script>
 
 <template>
-  <p>
-    <er-button @click="handleBtnClick"> with throttle</er-button>
-    <er-button :use-throttle="false" @click="handleBtnClick"
-      >without throttle</er-button
-    >
-  </p>
+	<p>
+		<vr-button @click="handleBtnClick"> with throttle</vr-button>
+		<vr-button :use-throttle="false" @click="handleBtnClick"
+			>without throttle</vr-button
+		>
+	</p>
 </template>

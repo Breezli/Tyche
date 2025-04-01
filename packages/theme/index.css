@@ -2,8 +2,8 @@
 
 :root {
 	/* colors */
-	--er-color-white: #ffffff;
-	--er-color-black: #000000;
+	--vr-color-white: #ffffff;
+	--vr-color-black: #000000;
 	--colors: (
 		primary: #409eff,
 		success: #67c23a,
@@ -11,65 +11,65 @@
 		danger: #f56c6c,
 		info: #909399
 	);
-	--er-bg-color: #ffffff;
-	--er-bg-color-page: #f2f3f5;
-	--er-bg-color-overlay: #ffffff;
-	--er-text-color-primary: #303133;
-	--er-text-color-regular: #606266;
-	--er-text-color-secondary: #909399;
-	--er-text-color-placeholder: #a8abb2;
-	--er-text-color-disabled: #c0c4cc;
-	--er-border-color: #dcdfe6;
-	--er-border-color-light: #e4e7ed;
-	--er-border-color-lighter: #ebeef5;
-	--er-border-color-extra-light: #f2f6fc;
-	--er-border-color-dark: #d4d7de;
-	--er-border-color-darker: #cdd0d6;
-	--er-fill-color: #f0f2f5;
-	--er-fill-color-light: #f5f7fa;
-	--er-fill-color-lighter: #fafafa;
-	--er-fill-color-extra-light: #fafcff;
-	--er-fill-color-dark: #ebedf0;
-	--er-fill-color-darker: #e6e8eb;
-	--er-fill-color-blank: #ffffff;
+	--vr-bg-color: #ffffff;
+	--vr-bg-color-page: #f2f3f5;
+	--vr-bg-color-overlay: #ffffff;
+	--vr-text-color-primary: #303133;
+	--vr-text-color-regular: #606266;
+	--vr-text-color-secondary: #909399;
+	--vr-text-color-placeholder: #a8abb2;
+	--vr-text-color-disabled: #c0c4cc;
+	--vr-border-color: #dcdfe6;
+	--vr-border-color-light: #e4e7ed;
+	--vr-border-color-lighter: #ebeef5;
+	--vr-border-color-extra-light: #f2f6fc;
+	--vr-border-color-dark: #d4d7de;
+	--vr-border-color-darker: #cdd0d6;
+	--vr-fill-color: #f0f2f5;
+	--vr-fill-color-light: #f5f7fa;
+	--vr-fill-color-lighter: #fafafa;
+	--vr-fill-color-extra-light: #fafcff;
+	--vr-fill-color-dark: #ebedf0;
+	--vr-fill-color-darker: #e6e8eb;
+	--vr-fill-color-blank: #ffffff;
 
 	@each $val, $color in var(--colors) {
-		--er-color-$(val): $(color);
+		--vr-color-$(val): $(color);
 		@for $i from 3 to 9 {
-			--er-color-$(val)-light-$(i): mix(#fff, $(color), 0$ (i));
+			--vr-color-$(val)-light-$(i): mix(#fff, $(color), 0$ (i));
 		}
-		--er-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+		--vr-color-$(val)-dark-2: mix(#000, $(color), 0.2);
 	}
 
 	/* border */
-	--er-border-width: 1px;
-	--er-border-style: solid;
-	--er-border-color-hover: var(--er-text-color-disabled);
-	--er-border: var(--er-border-width) var(--er-border-style)
-		var(--er-border-color);
-	--er-border-radius-base: 4px;
-	--er-border-radius-small: 2px;
-	--er-border-radius-round: 20px;
-	--er-border-radius-circle: 100%;
+	--vr-border-width: 1px;
+	--vr-border-style: solid;
+	--vr-border-color-hover: var(--vr-text-color-disabled);
+	--vr-border: var(--vr-border-width) var(--vr-border-style)
+		var(--vr-border-color);
+	--vr-border-radius-base: 4px;
+	--vr-border-radius-small: 2px;
+	--vr-border-radius-round: 20px;
+	--vr-border-radius-circle: 100%;
 
 	/*font*/
-	--er-font-size-extra-large: 20px;
-	--er-font-size-large: 18px;
-	--er-font-size-medium: 16px;
-	--er-font-size-base: 14px;
-	--er-font-size-small: 13px;
-	--er-font-size-extra-small: 12px;
-	--er-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC',
-		'Hiragino Sans GB', 'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial,
-		sans-serif;
-	--er-font-weight-primary: 500;
+	--vr-font-size-extra-large: 20px;
+	--vr-font-size-large: 18px;
+	--vr-font-size-medium: 16px;
+	--vr-font-size-base: 14px;
+	--vr-font-size-small: 13px;
+	--vr-font-size-extra-small: 12px;
+	--vr-font-family:
+		'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+		'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+	--vr-font-weight-primary: 500;
 
 	/*disabled*/
-	--er-disabled-bg-color: var(--er-fill-color-light);
-	--er-disabled-text-color: var(--er-text-color-placeholder);
-	--er-disabled-border-color: var(--er-border-color-light);
+	--vr-disabled-bg-color: var(--vr-fill-color-light);
+	--vr-disabled-text-color: var(--vr-text-color-placeholder);
+	--vr-disabled-border-color: var(--vr-border-color-light);
 
 	/*animation*/
-	--er-transition-duration: 0.4s;
-	--er-transition-duration-fast: 0.2s;
+	--vr-transition-duration: 0.4s;
+	--vr-transition-duration-fast: 0.2s;
 }

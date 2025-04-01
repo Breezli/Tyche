@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import type { DropdownItemProps, DropdownInstance } from 'tyche'
+	import type { DropdownItemProps, DropdownInstance } from 'veyra'
 	import { ref } from 'vue'
 
 	const items: DropdownItemProps[] = [
@@ -12,15 +12,15 @@
 </script>
 
 <template>
-	<er-button @click="() => dropdownRef?.open()">open</er-button>
-	<er-button @click="() => dropdownRef?.close()">close</er-button>
+	<vr-button @click="() => dropdownRef?.open()">open</vr-button>
+	<vr-button @click="() => dropdownRef?.close()">close</vr-button>
 	<br />
-	<er-dropdown ref="dropdownRef" :items="items">
+	<vr-dropdown ref="dropdownRef" :items="items">
 		<span class="dropdown-link">
 			Dropdown List
-			<er-icon icon="angle-down" />
+			<vr-icon icon="angle-down" />
 		</span>
-	</er-dropdown>
+	</vr-dropdown>
 </template>
 
 <style scoped>
@@ -28,7 +28,7 @@
 		display: flex;
 		align-items: center;
 		cursor: pointer;
-		color: var(--er-color-primary);
+		color: var(--vr-color-primary);
 		margin-top: 20px;
 		i {
 			margin-left: 8px;

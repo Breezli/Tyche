@@ -1,6 +1,6 @@
 import Alert from './Alert.vue'
-import { withInstall } from '@tyche/utils'
+import { withInstall } from '@veyra/utils'
 
-export const ErAlert = withInstall(Alert)
+export const VrAlert = withInstall(Alert)
 
 export * from './types'

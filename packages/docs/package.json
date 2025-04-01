@@ -1,24 +1,24 @@
 {
-  "name": "@tyche/docs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vitepress dev",
-    "build": "vitepress build",
-    "preview": "vitepress preview"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@10.4.1",
-  "devDependencies": {
-    "@vitepress-demo-preview/component": "^2.3.2",
-    "@vitepress-demo-preview/plugin": "^1.4.0",
-    "vitepress": "^1.6.3"
-  },
-  "dependencies": {
-    "@vitepress-code-preview/container": "^1.0.8",
-    "@vitepress-code-preview/plugin": "^1.0.6"
-  }
+	"name": "@veyra/docs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "vitepress dev",
+		"build": "vitepress build",
+		"preview": "vitepress preview"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"packageManager": "pnpm@10.4.1",
+	"devDependencies": {
+		"@vitepress-demo-preview/component": "^2.3.2",
+		"@vitepress-demo-preview/plugin": "^1.4.0",
+		"vitepress": "^1.6.3"
+	},
+	"dependencies": {
+		"@vitepress-code-preview/container": "^1.0.8",
+		"@vitepress-code-preview/plugin": "^1.0.6"
+	}
 }

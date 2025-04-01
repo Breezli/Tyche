@@ -3,9 +3,9 @@
 	import type { ButtonProps, ButtonEmits, ButtonInstance } from './types'
 	import { BUTTON_GROUP_CTX_KEY } from './constants'
 	import { throttle } from 'lodash-es'
-	import ErIcon from '../Icon/Icon.vue'
+	import VrIcon from '../Icon/Icon.vue'
 	defineOptions({
-		name: 'ErButton',
+		name: 'VrButton',
 	})
 	const props = withDefaults(defineProps<ButtonProps>(), {
 		tag: 'button',
@@ -47,10 +47,10 @@
 	<component
 		:is="tag"
 		ref="_ref"
-		class="er-button"
+		class="vr-button"
 		:class="{
-			[`er-button--${type}`]: type,
-			[`er-button--${size}`]: size,
+			[`vr-button--${type}`]: type,
+			[`vr-button--${size}`]: size,
 			'is-plain': plain,
 			'is-round': round,
 			'is-circle': circle,
@@ -66,7 +66,7 @@
 		">
 		<template v-if="loading">
 			<slot name="loading">
-				<er-icon
+				<vr-icon
 					class="loading-icon"
 					:icon="loadingIcon ?? 'spinner'"
 					:style="iconStyle"
@@ -74,7 +74,7 @@
 					spin />
 			</slot>
 		</template>
-		<er-icon
+		<vr-icon
 			:icon="icon"
 			size="1x"
 			:style="iconStyle"

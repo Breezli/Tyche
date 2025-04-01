@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	import { type DropdownItemProps } from 'tyche'
+	import { type DropdownItemProps } from 'veyra'
 
 	const items: DropdownItemProps[] = [
 		{ command: '1', label: 'Action 1' },
@@ -11,13 +11,13 @@
 
 <template>
 	<div class="row">
-		<er-dropdown :items="items" size="large" split-button>
+		<vr-dropdown :items="items" size="large" split-button>
 			Large List
-		</er-dropdown>
-		<er-dropdown :items="items" split-button> Default List </er-dropdown>
-		<er-dropdown :items="items" size="small" split-button>
+		</vr-dropdown>
+		<vr-dropdown :items="items" split-button> Default List </vr-dropdown>
+		<vr-dropdown :items="items" size="small" split-button>
 			small List
-		</er-dropdown>
+		</vr-dropdown>
 	</div>
 </template>
 

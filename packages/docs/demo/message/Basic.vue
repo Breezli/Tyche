@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 	import { h } from 'vue'
-	import { ErMessage } from 'tyche'
+	import { VrMessage } from 'veyra'
 
 	const open = () => {
-		ErMessage('This is a message.')
+		VrMessage('This is a message.')
 	}
 
 	const openVn = () => {
-		ErMessage({
+		VrMessage({
 			message: h('p', { style: 'line-height: 1; font-size: 14px' }, [
 				h('span', null, 'Message can be '),
 				h('i', { style: 'color: teal' }, 'VNode'),
@@ -17,6 +17,6 @@
 </script>
 
 <template>
-	<er-button :plain="true" @click="open">Show message</er-button>
-	<er-button :plain="true" @click="openVn">VNode</er-button>
+	<vr-button :plain="true" @click="open">Show message</vr-button>
+	<vr-button :plain="true" @click="openVn">VNode</vr-button>
 </template>

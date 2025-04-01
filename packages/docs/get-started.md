@@ -4,64 +4,63 @@ next:
   link: /components/button
   text: Button 按钮
 ---
-# Vue3 + TS 仿照 ElementPlus 打造自己的组件库
+
+# 快速开始
 
 ## 安装
 
-
 ```bash
 // 还未实现
-pnpm i @tyche-monorepo --save
+pnpm install -D @veyra-ui --save
 ```
 
 ## 开始使用
 
 **全局使用**
 
-
 ```js
 // 引入所有组件
-import TycheUI from '@tyche'
+import VeyraUI from '@veyra'
 // 引入样式
-import 'tyche/dist/style.css'
+import 'veyra/dist/style.css'
 
 import App from './App.vue'
 // 全局使用
-createApp(App).use(ErElement).mount('#app')
+createApp(App).use(VrElement).mount('#app')
 ```
 
 ```vue
 <template>
-  <er-button>我是 Button</er-button>
+	<vr-button>我是 Button</vr-button>
 </template>
 ```
 
 **单个导入**
 
-Tyche 提供了基于 ES Module 的开箱即用的 Tree Shaking 功能。
-
+veyra 提供了基于 ES Module 的开箱即用的 Tree Shaking 功能。
 
 ```vue
 <template>
-  <er-button>我是 Button</er-button>
+	<vr-button>我是 Button</vr-button>
 </template>
 <script>
-  import { ErButton } from ' er-element'
-  export default {
-    components: { ErButton },
-  }
+	import { VrButton } from ' vr-element'
+	export default {
+		components: { VrButton },
+	}
 </script>
 ```
 
 ## 亮点
 
 ::: details
+
 - Vite + Vitest + Vitepress 工具链
 - monorepo 分包管理
 - github actions 实现 CI/CD 自动化部署
 - 大模型辅助：使用大模型辅助完成需求分析，设计思路，快速实现组件，提升开发效率。
 - 当然，也会展示 发布“开箱即用” 的 npm 包
-:::
+  :::
 
 <!-- * 亮点1 🔥：“稀有”，目前上市面没有类似的高级课程，由浅入深的高仿 Element-Plus 完成组件库开发的全流程。
 * 亮点2 💧: “专业”，传授大厂前端项目架构设计思想/开发模式/代码规范/流程，不搞小作坊式代码。

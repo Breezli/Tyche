@@ -1,11 +1,11 @@
 <script setup lang="ts">
 	import { type DropdownItemProps } from './types'
 	import { DROPDOWN_CTX_KEY } from './constants'
-	import { useId } from '@tyche/hooks'
+	import { useId } from '@veyra/hooks'
 	import { inject, computed } from 'vue'
 
 	defineOptions({
-		name: 'ErDropdownItem',
+		name: 'VrDropdownItem',
 	})
 	const props = withDefaults(defineProps<DropdownItemProps>(), {
 		divided: false,
@@ -27,8 +27,8 @@
 	<li
 		:id="`dropdown-item-${command ?? useId().value}`"
 		:class="{
-			'er-dropdown__item': true,
-			['er-dropdown__item--' + size]: size,
+			'vr-dropdown__item': true,
+			['vr-dropdown__item--' + size]: size,
 			'is-disabled': disabled,
 			'is-divided': divided,
 		}"

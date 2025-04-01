@@ -1,6 +1,6 @@
 <template>
-  <er-tooltip placement="top">
-    <template #content> multiple lines<br />second line </template>
-    <er-button>Top center</er-button>
-  </er-tooltip>
+	<vr-tooltip placement="top">
+		<template #content> multiple lines<br />second line </template>
+		<vr-button>Top center</vr-button>
+	</vr-tooltip>
 </template>

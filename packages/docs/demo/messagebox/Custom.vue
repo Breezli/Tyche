@@ -1,11 +1,11 @@
 <script setup lang="ts">
 	import { h } from 'vue'
-	import { ErMessage, ErMessageBox } from 'tyche'
+	import { VrMessage, VrMessageBox } from 'veyra'
 	import { delay } from 'lodash-es'
 
 	async function openMsgBox() {
 		try {
-			const action = await ErMessageBox({
+			const action = await VrMessageBox({
 				title: 'Message',
 				message: h('p', null, [
 					h('span', null, 'Message can be '),
@@ -31,13 +31,13 @@
 				},
 			})
 
-			ErMessage.info(`action : ${action}`)
+			VrMessage.info(`action : ${action}`)
 		} catch (action) {
-			ErMessage.warning(`action : ${action}`)
+			VrMessage.warning(`action : ${action}`)
 		}
 	}
 </script>
 
 <template>
-	<er-button @click="openMsgBox" plain>Click to open Message Box</er-button>
+	<vr-button @click="openMsgBox" plain>Click to open Message Box</vr-button>
 </template>

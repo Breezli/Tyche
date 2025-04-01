@@ -1,14 +1,14 @@
 import type { Meta, StoryObj, ArgTypes } from '@storybook/vue3'
 import { fn, within, userEvent, expect } from '@storybook/test'
-import { ErButton, ErButtonGroup } from '@tyche/components'
-import 'tyche/dist/theme/Button.css'
+import { VrButton, VrButtonGroup } from '@veyra/components'
+import 'veyra/dist/theme/Button.css'
 
-type Story = StoryObj<typeof ErButton> & { argTypes?: ArgTypes }
+type Story = StoryObj<typeof VrButton> & { argTypes?: ArgTypes }
 
-const meta: Meta<typeof ErButton> = {
+const meta: Meta<typeof VrButton> = {
 	title: 'Example/Button',
-	component: ErButton,
-	subcomponents: { ButtonGroup: ErButtonGroup },
+	component: VrButton,
+	subcomponents: { ButtonGroup: VrButtonGroup },
 	tags: ['autodocs'],
 	argTypes: {
 		type: {
@@ -70,16 +70,16 @@ export const Default: Story & { args: { content: string } } = {
 		content: 'Button', //默认按钮文本
 	},
 	render: (args: any) => ({
-		components: { ErButton }, //声明当前故事中使用的组件（ErButton）
+		components: { VrButton }, //声明当前故事中使用的组件（VrButton）
 		setup() {
 			//将 args 对象暴露给模板，使模板可以直接访问 args 中的 props
 			return { args }
 		},
 		template: container(
 			//使用 container 函数包裹按钮组件
-			//v-bind="args"：将 args 中的所有属性绑定到 <er-button> 组件上
+			//v-bind="args"：将 args 中的所有属性绑定到 <vr-button> 组件上
 			//{{args.content}}：动态显示 content 参数的值（通过 args 传递）
-			`<er-button v-bind="args">{{args.content}}</er-button>`
+			`<vr-button v-bind="args">{{args.content}}</vr-button>`
 		),
 		//最终渲染结果会被包裹在 <div style="margin:5px">...</div> 中
 	}),
@@ -106,13 +106,13 @@ export const Circle: Story = {
 		icon: 'search', //按钮的图标
 	},
 	render: (args: any) => ({
-		components: { ErButton },
+		components: { VrButton },
 		setup() {
 			return { args }
 		},
 		// v-bind="args"：绑定 args 中的 props
 		template: container(`
-      <er-button circle v-bind="args"/>
+      <vr-button circle v-bind="args"/>
     `),
 	}),
 	play: async ({
@@ -163,7 +163,7 @@ export const Group: Story & { args: { content1: string; content2: string } } = {
 		content2: 'Button2',
 	},
 	render: (args: any) => ({
-		components: { ErButton, ErButtonGroup }, //用 ErButtonGroup 包裹多个按钮，实现按钮组布局
+		components: { VrButton, VrButtonGroup }, //用 VrButtonGroup 包裹多个按钮，实现按钮组布局
 		setup() {
 			return { args }
 		},
@@ -171,10 +171,10 @@ export const Group: Story & { args: { content1: string; content2: string } } = {
 		//:size="args.groupSize"：按钮组的大小（如 large）
 		//:disabled="args.groupDisabled"：按钮组的禁用状态
 		template: container(`
-       <er-button-group :type="args.groupType" :size="args.groupSize" :disabled="args.groupDisabled">
-         <er-button v-bind="args">{{args.content1}}</er-button>
-         <er-button v-bind="args">{{args.content2}}</er-button>
-       </er-button-group>
+       <vr-button-group :type="args.groupType" :size="args.groupSize" :disabled="args.groupDisabled">
+         <vr-button v-bind="args">{{args.content1}}</vr-button>
+         <vr-button v-bind="args">{{args.content2}}</vr-button>
+       </vr-button-group>
     `),
 	}),
 	play: async ({

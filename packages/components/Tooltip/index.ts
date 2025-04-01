@@ -1,6 +1,6 @@
-import Tooltip from "./Tooltip.vue";
-import { withInstall } from "@tyche/utils";
+import Tooltip from './Tooltip.vue'
+import { withInstall } from '@veyra/utils'
 
-export const ErTooltip = withInstall(Tooltip);
+export const VrTooltip = withInstall(Tooltip)
 
-export * from "./types";
+export * from './types'
