@@ -39,6 +39,7 @@
 		"postcss-for": "^2.1.1",
 		"postcss-nested": "^6.2.0",
 		"prettier": "^3.2.5",
+		"release-it": "^18.1.2",
 		"rollup": "^4.18.0",
 		"shelljs": "^0.8.5",
 		"typescript": "^5.4.5",
