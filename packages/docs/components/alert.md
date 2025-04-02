@@ -71,6 +71,12 @@ demo-preview=../demo/alert/Desc.vue
 demo-preview=../demo/alert/IconDesc.vue
 :::
 
+## 显示控制
+
+::: preview
+demo-preview=../demo/alert/Display.vue
+:::
+
 ## Alert API
 
 ### Props

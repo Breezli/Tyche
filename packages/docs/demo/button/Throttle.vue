@@ -8,8 +8,9 @@
 <template>
 	<p>
 		<vr-button @click="handleBtnClick"> with throttle</vr-button>
-		<vr-button :use-throttle="false" @click="handleBtnClick"
+		<vr-button @click="handleBtnClick" :use-throttle="false"
 			>without throttle</vr-button
 		>
 	</p>
 </template>
+

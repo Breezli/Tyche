@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest'
 import { nextTick } from 'vue'
-import type { MessageBoxType } from './types'
+import type { MessageBoxType } from './types'  67
 import MessageBox from './methods'
 
 export const rAF = async () => {

@@ -1,6 +1,6 @@
 > 施工ing，正在努力搭建......
 
-组件库地址 [veyra 组件库](https://breezli.cn/veyra/)
+组件库地址 [veyra 组件库](https://breezli.cn/Veyra/)
 
 ### 项目简介
 

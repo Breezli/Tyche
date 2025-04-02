@@ -9,7 +9,7 @@ export default defineConfig({
 	title: 'Veyra',
 	description: '融合工程化实践与AI生产力的现代前端开发套件',
 	appearance: false, // 关闭 darkMode @todo 深色模式完成后打开
-	base: '/veyra/',
+	base: '/Veyra/',
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
@@ -55,7 +55,7 @@ export default defineConfig({
 			},
 		],
 
-		socialLinks: [{ icon: 'github', link: 'https://github.com/Breezli/veyra' }],
+		socialLinks: [{ icon: 'github', link: 'https://github.com/Breezli/Veyra' }],
 	},
 	markdown: {
 		config(md) {
