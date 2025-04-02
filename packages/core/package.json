@@ -39,6 +39,8 @@
 	"license": "ISC",
 	"devDependencies": {
 		"@rollup/plugin-terser": "^0.4.4",
+		"release-it": "^18.1.2",
+		"rimraf": "^6.0.1",
 		"rollup-plugin-visualizer": "^5.12.0",
 		"terser": "^5.31.0",
 		"vite-plugin-compression": "^0.5.1"
