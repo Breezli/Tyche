@@ -1,6 +1,6 @@
 {
 	"name": "veyra",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "使用 Vue3 + Ts 构建的组件库",
 	"type": "module",
 	"files": [
