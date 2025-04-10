@@ -1,0 +1,20 @@
+/* 基础按钮样式 */
+.vr-button-plus {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	overflow: hidden;
+}
+
+/* 公共变量 */
+:root {
+	--vr-button-plus-radius: 0.75rem;
+	--vr-button-plus-padding-x: 1.5rem;
+	--vr-button-plus-padding-y: 0.5rem;
+	--vr-button-plus-font-weight: 600;
+}
+

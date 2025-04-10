@@ -9,6 +9,7 @@ import {
 	VrTooltip,
 	VrMessage,
 	VrMessageBox,
+	VrButtonPlus,
 } from '@veyra/components'
 import type { Plugin } from 'vue'
 
@@ -23,4 +24,5 @@ export default [
 	VrTooltip,
 	VrMessage,
 	VrMessageBox,
+	VrButtonPlus,
 ] as Plugin[]

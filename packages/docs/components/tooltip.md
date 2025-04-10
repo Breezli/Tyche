@@ -42,6 +42,23 @@ demo-preview=../demo/tooltip/Slot.vue
 demo-preview=../demo/tooltip/Disabled.vue
 :::
 
+## 延迟显示
+
+::: preview
+demo-preview=../demo/tooltip/Timeout.vue
+:::
+
+## Popper 配置
+
+Popper.js 的定位策略（如 `'bottom'`）
+具体使用见 [popper.js](https://popper.js.org/docs/v2/)
+
+[示例](https://popper.js.org/docs/v2/modifiers/flip/) 放置被设置为底部 ，但如果该放置不适合，则将使用相反的顶部放置
+
+::: preview
+demo-preview=../demo/tooltip/Propper.vue
+:::
+
 ## Tooltip API
 
 ### Props

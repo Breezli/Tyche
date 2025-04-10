@@ -10,8 +10,7 @@ next:
 ## 安装
 
 ```bash
-// 还未实现
-pnpm install -D @veyra-ui --save
+pnpm install -D @veyra --save
 ```
 
 ## 开始使用

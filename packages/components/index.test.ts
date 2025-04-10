@@ -11,6 +11,7 @@ import {
 	VrTooltip,
 	VrMessage,
 	VrMessageBox,
+	VrButtonPlus,
 } from './index'
 import { map, get } from 'lodash-es'
 
@@ -25,6 +26,7 @@ const components = [
 	VrTooltip,
 	VrMessage,
 	VrMessageBox,
+	VrButtonPlus,
 ] as Plugin[]
 
 describe('components/index.ts', () => {

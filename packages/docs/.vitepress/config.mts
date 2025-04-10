@@ -53,6 +53,16 @@ export default defineConfig({
 					{ text: 'MessageBox 弹框', link: 'components/messagebox' },
 				],
 			},
+			{
+				text: 'Plus版',
+				collapsed: false,
+				items: [
+					{ text: 'Button 按钮', link: 'components/button_plus' },
+					{ text: 'Card 卡片', link: 'components/card_plus' },
+					{ text: 'Input 输入框', link: 'components/input_plus' },
+					{ text: 'Text 文本', link: 'components/text_plus' },
+				],
+			},
 		],
 
 		socialLinks: [{ icon: 'github', link: 'https://github.com/Breezli/Veyra' }],
