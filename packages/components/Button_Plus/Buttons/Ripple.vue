@@ -83,12 +83,11 @@
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
-		border-radius: 0.5rem;
-		border-width: 2px;
-		background-color: var(--background);
+		border-radius: 0.7rem;
+		border: 2px #e5e7eb solid;
+		background-color: #fff;
 		padding: 0.5rem 1rem;
 		text-align: center;
-		color: var(--primary);
 	}
 
 	.ripple-content {

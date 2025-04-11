@@ -38,3 +38,11 @@ demo-preview=../demo/buttonplus/Rainbow.vue
 ::: preview
 demo-preview=../demo/buttonplus/Ripple.vue
 :::
+
+## 配置参数
+
+| 参数        | 说明                  | 类型                                   | 默认值          |
+| ----------- | --------------------- | -------------------------------------- | --------------- |
+| type        | 特效类型              | `'interactive'`/`'rainbow'`/`'ripple'` | `'interactive'` |
+| speed       | 流光速度(Rainbow独有) | `number`                               | 2               |
+| rippleColor | 涟漪色彩(Ripple独有)  | `string`                               | #ADD8E6         |

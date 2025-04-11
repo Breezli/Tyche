@@ -11,14 +11,14 @@ prev:
   text: 快速开始
 ---
 
-# InputPlus 升级输入框
+# InputPlus 输入框进化
 
-定制特效按钮
+定制特效输入框
 
-## Interactive Hover Button
+## Hover Input
 
-按钮进入动画
+hover流水灯
 
 ::: preview
-demo-preview=../demo/buttonplus/Interactive.vue
+demo-preview=../demo/Inputplus/Hover.vue
 :::

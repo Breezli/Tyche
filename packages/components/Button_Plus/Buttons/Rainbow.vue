@@ -42,7 +42,7 @@
 		border: 0;
 		padding: 0.5rem 2rem;
 		font-weight: 500;
-		color: var(--primary-foreground);
+		color: #fff;
 		transition: all 0.3s ease;
 		background-size: 200%;
 		background-clip: padding-box, border-box, border-box;
@@ -92,8 +92,8 @@
 			bottom: -20%;
 			left: 50%;
 			z-index: 0;
-			height: 20%;
-			width: 60%;
+			height: 25%;
+			width: 95%;
 			transform: translateX(-50%);
 			background: linear-gradient(
 				90deg,
@@ -104,13 +104,13 @@
 				var(--color-2)
 			);
 			background-size: 200%;
-			filter: blur(0.8rem);
-			animation: rainbow var(--speed) infinite linear;
+			filter: blur(0.5rem);
+			animation: rainbow 2s infinite linear;
 		}
 
 		/* States */
 		&:focus-visible {
-			box-shadow: 0 0 0 1px var(--ring);
+			box-shadow: 0 0 0 1px #3b82f680;
 		}
 
 		&:disabled {
@@ -119,7 +119,7 @@
 		}
 
 		/* Animation */
-		animation: rainbow var(--speed) infinite linear;
+		animation: rainbow 2s infinite linear;
 	}
 
 	@keyframes rainbow {

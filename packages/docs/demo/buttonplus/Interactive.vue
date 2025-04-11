@@ -1,3 +1,3 @@
 <template>
-	<vr-button-plus type="interactive">Button</vr-button-plus>
+	<vr-button-plus type="interactive">Interactive</vr-button-plus>
 </template>

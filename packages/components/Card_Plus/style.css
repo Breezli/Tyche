@@ -1,0 +1,43 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+canvas {
+	background-image: radial-gradient(#666, #333);
+}
+
+#instructions {
+	position: absolute;
+	color: #fff;
+	bottom: 0;
+	padding-bottom: 6px;
+	font-family: sans-serif;
+	width: 100%;
+	text-align: center;
+	pointer-events: none;
+}
+/* 基础卡片样式 */
+.vr-card-plus {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	overflow: hidden;
+	perspective: 1000px;
+}
+
+:root {
+	--vr-card-plus-radius: 0.75rem;
+	--vr-card-plus-padding: 1rem;
+	--vr-card-plus-border: 1px solid #e2e8f0;
+	--vr-card-plus-bg: #ffffff;
+	--vr-card-plus-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.float-card {
+	border-radius: var(--vr-card-plus-radius);
+	border: var(--vr-card-plus-border);
+	background-color: var(--vr-card-plus-bg);
+	box-shadow: var(--vr-card-plus-shadow);
+}

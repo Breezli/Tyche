@@ -16,5 +16,12 @@
 	--vr-button-plus-padding-x: 1.5rem;
 	--vr-button-plus-padding-y: 0.5rem;
 	--vr-button-plus-font-weight: 600;
-}
-
+	
+	/* 颜色变量 */
+	--vr-color-white: #fff;
+	--vr-color-black: #000;
+	--background: #fff;
+	--primary: #3b82f6;
+	--primary-foreground: #fff;
+	--ring: #3b82f680;
+  }

@@ -41,7 +41,7 @@
 		overflow: hidden;
 		border-radius: 9999px;
 		border: 1px solid;
-		background-color: var(--vr-color-white);
+		background-color: #fff;
 		font-family: fantasy;
 		padding: 0.5rem 1.5rem;
 		text-align: center;
@@ -90,16 +90,16 @@
 	}
 
 	/* Hover states */
-	.vr-button-plus:hover .button-dot {
+	.interactive-button:hover .button-dot {
 		transform: scale(40);
 	}
 
-	.vr-button-plus:hover .button-text {
+	.interactive-button:hover .button-text {
 		transform: translateX(3rem);
 		opacity: 0;
 	}
 
-	.vr-button-plus:hover .hover-content {
+	.interactive-button:hover .hover-content {
 		transform: translateX(-1.25rem);
 		opacity: 1;
 	}
