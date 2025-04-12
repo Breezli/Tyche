@@ -37,6 +37,9 @@ function normalizeOptions(options: MessageParams): CreateMessageProps {
 
 function createMessage(props: CreateMessageProps): MessageInstance {
 	const id = useId().value
+	if (typeof document === 'undefined') {
+		throw new Error('createMessage should only be called in the browser.')
+	}
 	const container = document.createElement('div')
 	const destory = () => {
 		const idx = findIndex(instances, { id })
@@ -58,7 +61,9 @@ function createMessage(props: CreateMessageProps): MessageInstance {
 
 	render(vnode, container)
 
-	document.body.appendChild(container.firstElementChild!)
+	if (typeof document !== 'undefined') {
+		document.body.appendChild(container.firstElementChild!)
+	}
 
 	const vm = vnode.component!
 	const handler: MessageHandler = {

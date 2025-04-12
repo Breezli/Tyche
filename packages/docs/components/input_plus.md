@@ -20,5 +20,5 @@ prev:
 hover流水灯
 
 ::: preview
-demo-preview=../demo/Inputplus/Hover.vue
+demo-preview=../demo/inputplus/Hover.vue
 :::

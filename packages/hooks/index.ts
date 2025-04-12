@@ -5,6 +5,7 @@ import useId from './useId'
 import useDisabledStyle from './useDisabledStyle'
 import useFocusController from './useFocusController'
 import useOffset from './useOffset'
+import useMouseState from './useMouseState'
 
 export {
 	useClickOutside,
@@ -14,4 +15,5 @@ export {
 	useDisabledStyle,
 	useFocusController,
 	useOffset,
+	useMouseState,
 }

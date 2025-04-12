@@ -1,43 +1,50 @@
-body {
-	margin: 0;
-	overflow: hidden;
+/* 全局过渡类 */
+.transition-3d {
+	transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-canvas {
-	background-image: radial-gradient(#666, #333);
-}
-
-#instructions {
-	position: absolute;
-	color: #fff;
-	bottom: 0;
-	padding-bottom: 6px;
-	font-family: sans-serif;
-	width: 100%;
-	text-align: center;
-	pointer-events: none;
-}
-/* 基础卡片样式 */
+/* 基础样式 */
 .vr-card-plus {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	overflow: hidden;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 容器样式 */
+.card-container {
 	perspective: 1000px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
 }
 
-:root {
-	--vr-card-plus-radius: 0.75rem;
-	--vr-card-plus-padding: 1rem;
-	--vr-card-plus-border: 1px solid #e2e8f0;
-	--vr-card-plus-bg: #ffffff;
-	--vr-card-plus-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+/* 内容区域 */
+.card-body {
+	transform-style: preserve-3d;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 1rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	background: #fff;
+	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+	padding: 2rem;
 }
 
-.float-card {
-	border-radius: var(--vr-card-plus-radius);
-	border: var(--vr-card-plus-border);
-	background-color: var(--vr-card-plus-bg);
-	box-shadow: var(--vr-card-plus-shadow);
+/* 项目样式 */
+.card-item {
+	transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+	transform-style: preserve-3d;
+	will-change: transform;
+}
+
+/* 暗黑模式 */
+.dark .card-body {
+	background: #1a1a1a;
+	border-color: rgba(255, 255, 255, 0.1);
+	box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1);
+}
+
+/* 将静态样式移至此处 */
+.card-container {
+	transform-style: preserve-3d;
 }

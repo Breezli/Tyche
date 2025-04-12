@@ -52,11 +52,16 @@ function initInstance(props: MessageBoxProps, container: HTMLElement) {
 		isVNodeMsg ? { default: genDefaultSlot(props.message as VNode) } : void 0
 	)
 	render(vnode, container)
-	document.body.appendChild(container.firstElementChild!)
+	if (typeof document !== 'undefined') {
+		document.body.appendChild(container.firstElementChild!)
+	}
 	return vnode.component
 }
 
 function genContainer() {
+	if (typeof document === 'undefined') {
+		throw new Error('genContainer should only be called in the browser.')
+	}
 	return document.createElement('div')
 }
 
