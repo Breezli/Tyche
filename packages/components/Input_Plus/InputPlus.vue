@@ -17,6 +17,7 @@
 		(e: 'update:modelValue', payload: string | number): void
 	}>()
 
+	const isHovered = ref(false)
 	const innerValue = ref(props.defaultValue ?? props.modelValue ?? '')
 
 	watch(
@@ -54,13 +55,20 @@
 		class="input-container group/input"
 		:class="containerClass"
 		:style="{ background: containerBg }"
-		@mouseenter="visible = true"
-		@mouseleave="visible = false"
+		@mouseenter="
+			visible = true;
+			isHovered = true
+		"
+		@mouseleave="
+			visible = false;
+			isHovered = false
+		"
 		@mousemove="handleMouseMove">
 		<input
 			v-bind="$attrs"
 			v-model="innerValue"
 			class="input-element"
-			:class="props.class" />
+			:class="props.class"
+			:style="{ boxShadow: isHovered ? 'none' : '' }" />
 	</div>
 </template>

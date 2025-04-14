@@ -80,7 +80,4 @@
 
 <style scoped>
 	@import './style.css';
-	.card-container {
-		transform-style: preserve-3d;
-	}
 </style>

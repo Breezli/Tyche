@@ -18,7 +18,7 @@
 		isMouseEntered: { value: boolean }
 	}
 
-	const mouseState = inject<MouseState>('use3DCardMouseState')!
+	const mouseState = inject<MouseState>('cardMouseState')!
 
 	watch(
 		() => mouseState.isMouseEntered.value,
@@ -37,22 +37,25 @@
 </script>
 
 <template>
-	<component
-		:is="props.as"
-		ref="refElement"
-		:class="[
-			'float-item',
-			'transition-3d', // 统一过渡类
-			props.class,
-		]">
-		<slot />
-	</component>
+	<div class="box">
+		<component
+			:is="props.as"
+			ref="refElement"
+			:class="[
+				'float-item',
+				'transition-3d', // 统一过渡类
+				props.class,
+			]">
+			<slot />
+		</component>
+	</div>
 </template>
 
 <style scoped>
 	.float-item {
 		transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 		transform-style: preserve-3d;
+		perspective: 1000px;
 		will-change: transform;
 		transform: translateZ(0);
 	}

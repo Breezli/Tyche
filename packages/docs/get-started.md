@@ -19,13 +19,15 @@ pnpm install -D @veyra --save
 
 ```js
 // 引入所有组件
-import VeyraUI from '@veyra'
+import VeyraUI from 'veyra'
 // 引入样式
-import 'veyra/dist/style.css'
+import 'veyra/dist/index.css'
 
 import App from './App.vue'
 // 全局使用
-createApp(App).use(VrElement).mount('#app')
+const app = createApp(App)
+app.use(VeyraUI)
+app.mount('#app')
 ```
 
 ```vue

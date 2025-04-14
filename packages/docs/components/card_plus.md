@@ -17,7 +17,7 @@ prev:
 
 ## Float Card
 
-Float漂浮卡片
+Float漂浮卡片(🔰开发中)
 
 ::: preview
 demo-preview=../demo/cardplus/Float.vue
@@ -25,7 +25,7 @@ demo-preview=../demo/cardplus/Float.vue
 
 ## Flip Card
 
-翻转卡片
+翻转卡片(🔰开发中)
 
 ::: preview
 demo-preview=../demo/cardplus/Float.vue

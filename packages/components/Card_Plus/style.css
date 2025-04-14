@@ -11,6 +11,7 @@
 /* 容器样式 */
 .card-container {
 	perspective: 1000px;
+	transform-style: preserve-3d;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -42,9 +43,4 @@
 	background: #1a1a1a;
 	border-color: rgba(255, 255, 255, 0.1);
 	box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1);
-}
-
-/* 将静态样式移至此处 */
-.card-container {
-	transform-style: preserve-3d;
 }
