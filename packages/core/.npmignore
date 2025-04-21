@@ -1,0 +1,8 @@
+node_modules/
+tests/
+docs/
+*.log
+*.map
+*.md
+*.lock
+*.lock.json

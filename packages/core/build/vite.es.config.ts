@@ -12,7 +12,7 @@ import terser from '@rollup/plugin-terser'
 
 const TRY_MOVE_STYLES_DELAY = 750 as const
 
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === 'production' // 生产环境
 const isDev = process.env.NODE_ENV === 'development'
 const isTest = process.env.NODE_ENV === 'test'
 
@@ -81,7 +81,7 @@ export default defineConfig({
 	],
 	build: {
 		outDir: 'dist/es',
-		minify: false,
+		minify: 'terser',
 		cssCodeSplit: true,
 		sourcemap: !isProd,
 		lib: {
@@ -91,6 +91,7 @@ export default defineConfig({
 			formats: ['es'],
 		},
 		rollupOptions: {
+			treeshake: true,
 			external: [
 				'vue',
 				'@fortawesome/fontawesome-svg-core',

@@ -10,6 +10,11 @@ export default defineConfig({
 	description: '融合工程化实践与AI生产力的现代前端开发套件',
 	appearance: false, // 关闭 darkMode @todo 深色模式完成后打开
 	base: '/Veyra/',
+	vite: {
+		ssr: {
+			noExternal: ['some-library'], // 忽略某些库的 SSR 检查
+		},
+	},
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
