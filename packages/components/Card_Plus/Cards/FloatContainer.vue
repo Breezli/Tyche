@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-	import { inject, ref, watch, type Ref } from 'vue'
+	import { inject, ref, watch } from 'vue'
 
 	const props = defineProps({
 		as: { type: String, default: 'div' },
@@ -30,9 +30,9 @@
 	const refElement = ref<HTMLElement | null>(null)
 
 	// 假设 `useMouseState` 是一个自定义钩子，假设 `mouseState` 已注入
-	const mouseState = inject('use3DCardMouseState') as {
-		isMouseEntered: Ref<boolean>
-	}
+	const mouseState = inject('use3DCardMouseState', {
+		isMouseEntered: ref(false),
+	})
 
 	function handleAnimation(isMouseEntered: boolean) {
 		if (import.meta.env.SSR) return // 避免 SSR 时执行

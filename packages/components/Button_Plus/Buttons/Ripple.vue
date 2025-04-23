@@ -60,18 +60,16 @@
 			<slot />
 		</div>
 
-		<span class="ripple-container">
-			<span
-				v-for="ripple in buttonRipples"
-				:key="ripple.key"
-				class="ripple-effect"
-				:style="{
-					width: ripple.size + 'px',
-					height: ripple.size + 'px',
-					top: ripple.y + 'px',
-					left: ripple.x + 'px',
-				}" />
-		</span>
+		<span
+			v-for="ripple in buttonRipples"
+			:key="ripple.key"
+			class="ripple-effect"
+			:style="{
+				width: ripple.size + 'px',
+				height: ripple.size + 'px',
+				top: ripple.y + 'px',
+				left: ripple.x + 'px',
+			}" />
 	</button>
 </template>
 

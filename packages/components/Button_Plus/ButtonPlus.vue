@@ -41,7 +41,7 @@
 </script>
 
 <template>
-	<component :is="props.is" class="vr-button-plus" :class="props.class">
+	<component :is="props.is" class="vr-button-plus" :class="['button-plus']">
 		<Suspense>
 			<component :is="currentComponent" v-bind="props">
 				<slot />

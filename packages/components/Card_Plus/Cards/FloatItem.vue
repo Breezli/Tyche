@@ -18,7 +18,9 @@
 		isMouseEntered: { value: boolean }
 	}
 
-	const mouseState = inject<MouseState>('cardMouseState')!
+	const mouseState = inject<MouseState>('cardMouseState', {
+		isMouseEntered: { value: false },
+	}) as MouseState
 
 	watch(
 		() => mouseState.isMouseEntered.value,
@@ -57,6 +59,7 @@
 		transform-style: preserve-3d;
 		perspective: 1000px;
 		will-change: transform;
-		transform: translateZ(0);
+		transform: translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg)
+			rotateY(0deg) rotateZ(0deg);
 	}
 </style>
